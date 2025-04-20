@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uzmovi</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="/">🏠 Bosh sahifa</a>
+        {% if user.is_authenticated %}
+            <a href="/logout/">Chiqish</a>
+        {% else %}
+            <a href="/login/">Kirish</a>
+            <a href="/register/">Ro‘yxatdan o‘tish</a>
+        {% endif %}
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

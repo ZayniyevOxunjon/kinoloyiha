@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ film.title }}</h2>
+<img src="{{ film.image.url }}" width="300">
+<p>{{ film.body }}</p>
+<p>📆 Yil: {{ film.year }}</p>
+<p>🎞️ Kategoriya: {{ film.category.name }}</p>
+<p>🌍 Mamlakat: {{ film.country.name }}</p>
+<p>⭐ Reytinglar soni: {{ film.rating_set.count }}</p>
+<p>📥 Yuklab olish: <a href="{{ film.video_url }}">Shu yerda</a></p>
+{% endblock %}
